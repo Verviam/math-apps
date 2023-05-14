@@ -1,0 +1,8 @@
+yTwo = float(input('What is your Y two?'))
+yOne = float(input('What is your Y one?'))
+xTwo = float(input('What is your X Two?'))
+xOne = float(input('What is your X One?'))
+
+total = (yTwo-yOne)/(xTwo-xOne)
+
+print(total)
