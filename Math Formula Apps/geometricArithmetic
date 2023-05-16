@@ -1,0 +1,12 @@
+import cmath
+
+def arithmeticSequence():
+    a1 = float(input('What is the first term? '))
+    diff = float(input('What is the common difference? '))
+    position = int(input('Which position is term are you finding? '))
+    
+    aN = a1 + diff * (int(position) - 1)
+    print('The ' + str(position) + ' term is ' + str(int(aN)))
+    
+def geometricSequence():
+    
