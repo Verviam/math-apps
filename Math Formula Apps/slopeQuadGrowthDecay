@@ -21,8 +21,6 @@ def growthOrDecay():
     x1 = float(a) * r + float(r2) #total of initial amount + rate (growth)
     x2 = float(a) * r - float(r2) #decay
 
-    # might to to put parenthesis between float(a)(r + float(r2))
-
     # total = pow(x, float(t)) # this variable returns the base raised to the power of the exponent
     if growth_decay == 'G':
         total = pow(x1, float(t))
