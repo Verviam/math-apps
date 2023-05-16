@@ -1,10 +1,10 @@
 import cmath
 
 def slopeApp():
-    yTwo = float(input('What is your Y two?'))
-    yOne = float(input('What is your Y one?'))
-    xTwo = float(input('What is your X Two?'))
-    xOne = float(input('What is your X One?'))
+    yTwo = float(input('What is your Y two? '))
+    yOne = float(input('What is your Y one? '))
+    xTwo = float(input('What is your X Two? '))
+    xOne = float(input('What is your X One? '))
 
     total = (yTwo-yOne)/(xTwo-xOne)
 
@@ -17,15 +17,19 @@ def growthOrDecay():
     r2 = input('What is the rate of growth or decay? ')
     t = input('How long in years? ') #time
     growth_decay = input('Do you want growth or decay? (G/D) ')
+    
 
-    x1 = float(a) * r + float(r2) #total of initial amount + rate (growth)
-    x2 = float(a) * r - float(r2) #decay
+    rateG = float(r) + float(r2)
+    amountG = float(a) * rateG
+
+    rateD = float(r) - float(r2)
+    amountD = float(a) * rateD
 
     # total = pow(x, float(t)) # this variable returns the base raised to the power of the exponent
     if growth_decay == 'G':
-        total = pow(x1, float(t))
+        total = pow(amountG, float(t))
     elif growth_decay == 'D':
-        total = pow(x2, float(t))
+        total = pow(amountD, float(t))
     print(total)
 
 def quadraticFormula():
