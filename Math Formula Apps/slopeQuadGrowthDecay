@@ -1,0 +1,69 @@
+import cmath
+
+def slopeApp():
+    yTwo = float(input('What is your Y two?'))
+    yOne = float(input('What is your Y one?'))
+    xTwo = float(input('What is your X Two?'))
+    xOne = float(input('What is your X One?'))
+
+    total = (yTwo-yOne)/(xTwo-xOne)
+
+    print(total)
+
+def growthOrDecay():
+    a = input('What is the starting amount? ')
+    r = 1.0 #rate calculation (growth): change addition symbol to subtraction if decay
+
+    r2 = input('What is the rate of growth or decay? ')
+    t = input('How long in years? ') #time
+    growth_decay = input('Do you want growth or decay? (G/D) ')
+
+    x1 = float(a) * r + float(r2) #total of initial amount + rate (growth)
+    x2 = float(a) * r - float(r2) #decay
+
+    # might to to put parenthesis between float(a)(r + float(r2))
+
+    # total = pow(x, float(t)) # this variable returns the base raised to the power of the exponent
+    if growth_decay == 'G':
+        total = pow(x1, float(t))
+    elif growth_decay == 'D':
+        total = pow(x2, float(t))
+    print(total)
+
+def quadraticFormula():
+    import cmath
+
+    a = float(input('What is your A value? '))
+    b = float(input('What is your B value? '))
+    c = float(input('What is your C value? '))
+    print('A: ' + str(a),' B: ' + str(b),' C: ' + str(c))
+
+    root1 = 0.0
+    root2 = 0.0
+
+    root1 = (-b + cmath.sqrt(b*b - 4*a*c)) / (2 * a)
+    root2 = (-b - cmath.sqrt(b*b - 4*a*c)) / (2 * a)
+
+    print(root1)
+    print(root2)
+
+def formulaApp():
+    print('''
+    Slope App : '1'
+    Quadratic Formula App: '2'
+    Growth and Decay App: '3'
+    ''')
+    calc_again = input('What formula app do you want to use? ')
+    if calc_again == '1':
+        slopeApp()
+    elif calc_again == '2':
+        quadraticFormula()
+    elif calc_again == '3':
+        growthOrDecay()
+    else:
+        formulaApp()
+    again = input('Do you want to run this program again? Y/N ')
+    if again == ('Y'):
+        formulaApp()
+
+formulaApp()
