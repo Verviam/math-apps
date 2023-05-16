@@ -6,9 +6,11 @@ def slopeApp():
     xTwo = float(input('What is your X Two? '))
     xOne = float(input('What is your X One? '))
 
-    total = (yTwo-yOne)/(xTwo-xOne)
-
-    print(total)
+    try: 
+        total = (yTwo-yOne)/(xTwo-xOne)
+        print(total)
+    except ZeroDivisionError:
+        print('Undefined')
 
 def growthOrDecay():
     a = input('What is the starting amount? ')
