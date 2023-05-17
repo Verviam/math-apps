@@ -1,6 +1,7 @@
 import cmath
 
 def slopeApp():
+    
     yTwo = float(input('What is your Y two? '))
     yOne = float(input('What is your Y one? '))
     xTwo = float(input('What is your X Two? '))
@@ -13,6 +14,7 @@ def slopeApp():
         print('Undefined')
 
 def growthOrDecay():
+
     a = input('What is the starting amount? ')
     r = 1.0 #rate calculation (growth): change addition symbol to subtraction if decay
 
@@ -27,15 +29,16 @@ def growthOrDecay():
     rateD = float(r) - float(r2)
     amountD = float(a) * rateD
 
-    # total = pow(x, float(t)) # this variable returns the base raised to the power of the exponent
-    if growth_decay == 'G':
-        total = pow(amountG, float(t))
-    elif growth_decay == 'D':
-        total = pow(amountD, float(t))
-    print(total)
+    try:
+        if growth_decay == 'G':
+            total = pow(amountG, float(t))
+        elif growth_decay == 'D':
+            total = pow(amountD, float(t))
+        print(total)
+    except UnboundLocalError:
+        print('Please write G or D in uppercase')
 
 def quadraticFormula():
-    import cmath
 
     a = float(input('What is your A value? '))
     b = float(input('What is your B value? '))
@@ -51,11 +54,23 @@ def quadraticFormula():
     print(root1)
     print(root2)
 
+def rateChange():
+    
+    new = float(input('What is your new value? '))
+    old = float(input('What is your old value? '))
+
+    try:
+        total = (old-new)/old * 100
+        print('Your rate of change is ' + str(total) + '%')
+    except ZeroDivisionError: 
+        print('Cannot divide by 0')
+
 def formulaApp():
     print('''
     Slope App : '1'
     Quadratic Formula App: '2'
     Growth and Decay App: '3'
+    Rate of Change: '4'
     ''')
     calc_again = input('What formula app do you want to use? ')
     if calc_again == '1':
@@ -64,6 +79,8 @@ def formulaApp():
         quadraticFormula()
     elif calc_again == '3':
         growthOrDecay()
+    elif calc_again == '4':
+        rateChange()
     else:
         formulaApp()
     again = input('Do you want to run this program again? Y/N ')
