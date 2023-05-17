@@ -1,6 +1,6 @@
-#Math Formula Apps:
+# Math Formula Apps:
 
-geometricArithmetic:
+# geometricArithmetic:
     - Geometric Sequence
     - Geometric Series
     - Geometric Recursive Formula
@@ -8,7 +8,7 @@ geometricArithmetic:
     - Arithmetic Series
     - Arithmetic Recursive Formula
 
-slopeQuadGrowthDecayRateChange:
+# slopeQuadGrowthDecayRateChange:
     - Slope App
     - Quadratic Formula App
     - Growth and Decay App
