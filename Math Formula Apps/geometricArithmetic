@@ -1,12 +1,34 @@
 import cmath
 
 def arithmeticSequence():
+    print('Arithmetic Sequence Chosen')
     a1 = float(input('What is the first term? '))
     diff = float(input('What is the common difference? '))
-    position = int(input('Which position is term are you finding? '))
+    position = int(input('What is the position of the term being found? '))
     
     aN = a1 + diff * (int(position) - 1)
     print('The ' + str(position) + ' term is ' + str(int(aN)))
-    
+ 
 def geometricSequence():
-    
+    print('Geometric Sequence Chosen')
+    a1 = float(input('What is the first term? '))
+    ratio = float(input('What is the common ratio? '))
+    position = int(input('What is the position of the term being found? '))
+
+    aN = a1 * pow(ratio, position-1)
+    print('The ' + str(position) + 'term is ' + str(int(aN)))
+
+def geometricArithmetic():
+    print('''
+    Arithmetic Sequence: '1'
+    Geometric Sequence: '2'
+    ''')
+    choose = float(input('Which formula do you want to use? '))
+
+    if choose == 1:
+        arithmeticSequence()
+    elif choose == 2:
+        geometricSequence()
+
+geometricArithmetic()
+
