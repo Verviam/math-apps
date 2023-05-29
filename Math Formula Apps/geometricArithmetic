@@ -22,16 +22,18 @@ def geometricArithmetic():
     print('''
     Arithmetic Sequence: '1'
     Arithmetic Series: '2'
-    Geometric Sequence: '2'
+    Geometric Sequence: '3'
+    Geometric Series: '4'
     ''')
     choose = float(input('Which formula do you want to use? '))
 
     if choose == 1:
         arithmeticSequence()
+    elif choose == 2:
+        arithmeticSeries()
     elif choose == 3:
         geometricSequence()
+    elif choose == 4: 
+        geometricSeries()
 
 geometricArithmetic()
-
-## - Geometric Series
-## - Arithmetic Series
