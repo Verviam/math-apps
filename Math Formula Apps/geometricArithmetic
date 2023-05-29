@@ -8,6 +8,7 @@ def arithmeticSequence():
     
     aN = a1 + diff * (int(position) - 1)
     print('The ' + str(position) + ' term is ' + str(int(aN)))
+    return aN
  
 def geometricSequence():
     print('Geometric Sequence Chosen')
@@ -17,6 +18,24 @@ def geometricSequence():
 
     aN = a1 * pow(ratio, position-1)
     print('The ' + str(position) + 'term is ' + str(int(aN)))
+    return aN
+
+def arithmeticSeries():
+    print('Arithmetic Series Chosen')
+    a1 = float(input('What is the first term? '))
+    n = float(input('How many numbers are in the series? '))
+    aN = input('What is the ' + str(int(n)) + ' number in the sequence? [Type A to use Arithmetic Explicit Sequence to find out] ')
+
+    if str(aN) == 'A':
+        arithmeticSequence()
+        again = input('Do you want to go back to the Arithmetic Series Calculator? Y/N ')
+        if again == ('Y'):
+            arithmeticSeries()
+    Sn = n * (a1 + float(aN))/2
+    print('The sum of all the numbers is ' + 'Sn')
+    return Sn
+
+# fix value error convert string to float: A
 
 def geometricArithmetic():
     print('''
@@ -35,5 +54,10 @@ def geometricArithmetic():
         geometricSequence()
     elif choose == 4: 
         geometricSeries()
+    else:
+        geometricArithmetic()
+    again = input('Do you want to run this program again? Y/N ')
+    if again == ('Y'):
+        geometricArithmetic()
 
 geometricArithmetic()
