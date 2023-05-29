@@ -3,10 +3,8 @@
 # geometricArithmetic:
     - Geometric Sequence
     - Geometric Series
-    - Geometric Recursive Formula
     - Arithmetic Sequence
     - Arithmetic Series
-    - Arithmetic Recursive Formula
 
 # slopeQuadGrowthDecayRateChange:
     - Slope App

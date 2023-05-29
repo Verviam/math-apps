@@ -21,18 +21,17 @@ def geometricSequence():
 def geometricArithmetic():
     print('''
     Arithmetic Sequence: '1'
+    Arithmetic Series: '2'
     Geometric Sequence: '2'
     ''')
     choose = float(input('Which formula do you want to use? '))
 
     if choose == 1:
         arithmeticSequence()
-    elif choose == 2:
+    elif choose == 3:
         geometricSequence()
 
 geometricArithmetic()
 
 ## - Geometric Series
-## - Geometric Recursive Formula
 ## - Arithmetic Series
-## - Arithmetic Recursive Formula
