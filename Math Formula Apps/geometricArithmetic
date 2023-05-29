@@ -37,6 +37,9 @@ def arithmeticSeries():
 
 # fix value error convert string to float: A
 
+def geometricSeries():
+    ...
+    
 def geometricArithmetic():
     print('''
     Arithmetic Sequence: '1'
